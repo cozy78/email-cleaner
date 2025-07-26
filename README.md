@@ -140,32 +140,8 @@ Key variables:
 - **Storage Savings**: Average 200MB+ per cleanup session
 - **Unsubscribe Success Rate**: 85%+ for newsletters with valid links
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Google Gmail API for powerful email access
-- Chart.js for beautiful data visualizations
-- Flask team for the excellent web framework
-
-⭐ **Star this repository if it helped you clean up your inbox!**
-
 ## 🔗 Live Demo
 
 🌐 **[Try the live demo](https://email-cleaner-demo.vercel.app)**
 
 > **Note**: The live demo runs in demonstration mode. For full functionality with your Gmail account, clone and run locally with your own Google API credentials.
-
----
-
-*Built with ❤️ for a cleaner inbox experience*
