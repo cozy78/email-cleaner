@@ -7,7 +7,6 @@
 ## ✨ Features
 
 ### 🔍 **Smart Analysis**
-- **Newsletter Detection**: AI-powered identification using multiple criteria
 - **Unsubscribe Link Detection**: Automatic extraction from email headers and content
 - **Storage Analysis**: Detailed breakdown of email storage usage
 - **Interactive Visualizations**: Charts and graphs for email data insights
