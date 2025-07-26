@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+email-env/
+env/
+venv/
+.venv/
+
+# Sensitive files
+credentials.json
+gmail_token.pickle
+token.json
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (if any)
+node_modules/

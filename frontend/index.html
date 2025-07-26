@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Cleaner Dashboard</title>
+    
+    <!-- External Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>📧 Email Cleaner Dashboard</h1>
+            <p>Intelligente Email-Analyse & Cleanup-Automation</p>
+        </header>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <h3>📄 Email-Analyse laden</h3>
+                    <p class="upload-description">Lade deine email_analysis.json Datei hoch</p>
+                    
+                    <label for="fileInput" class="upload-button">
+                        📁 Datei auswählen
+                    </label>
+                    <input type="file" id="fileInput" accept=".json" aria-label="JSON-Datei auswählen">
+                    
+                    <p class="upload-hint">Oder ziehe die Datei einfach hierher</p>
+                    
+                    <button class="demo-button" id="demoButton">Demo laden</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section class="loading-section" id="loadingSection">
+            <div class="spinner"></div>
+            <h3>Analysiere Email-Daten...</h3>
+        </section>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-content" id="dashboardContent">
+            
+            <!-- Statistics Overview -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card emails-card">
+                        <div class="stat-number" id="totalEmails" aria-label="Anzahl analysierte Emails">-</div>
+                        <div class="stat-label">Emails Analysiert</div>
+                    </div>
+                    <div class="stat-card newsletters-card">
+                        <div class="stat-number" id="newsletterCount" aria-label="Anzahl gefundene Newsletter">-</div>
+                        <div class="stat-label">Newsletter Gefunden</div>
+                    </div>
+                    <div class="stat-card space-card">
+                        <div class="stat-number" id="totalSize" aria-label="Gesamtgröße in MB">-</div>
+                        <div class="stat-label">MB Gesamt</div>
+                    </div>
+                    <div class="stat-card savings-card">
+                        <div class="stat-number" id="potentialSavings" aria-label="Mögliche Einsparung in MB">-</div>
+                        <div class="stat-label">MB Einsparung möglich</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h3 class="chart-title">📊 Email-Verteilung</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="emailDistributionChart" aria-label="Kreisdiagramm der Email-Verteilung"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">💾 Speicher-Analyse</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="storageAnalysisChart" aria-label="Balkendiagramm der Speicher-Analyse"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Details -->
+            <section class="newsletter-section">
+                <div class="newsletter-container">
+                    <h3 class="section-title">📰 Gefundene Newsletter</h3>
+                    <div class="newsletter-list" id="newsletterList">
+                        <!-- Newsletter items will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Controls -->
+            <section class="actions-section">
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="downloadReportBtn" aria-label="Email-Report herunterladen">
+                        📊 Report Downloaden
+                    </button>
+                    <button class="btn btn-warning" id="cleanupBtn" aria-label="Cleanup-Optionen anzeigen">
+                        🧹 Cleanup Starten
+                    </button>
+                    <button class="btn btn-danger" id="exportDataBtn" aria-label="Daten als CSV exportieren">
+                        💾 Daten Exportieren
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/email_actions.js"></script>
+</body>
+</html>
