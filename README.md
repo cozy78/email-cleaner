@@ -35,7 +35,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/email-cleaner.git
+   git clone https://github.com/cozy78/email-cleaner
    cd email-cleaner
    ```
 
